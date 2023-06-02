@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Sorter</title>
+  <script>
+    function sortString() {
+      var input = document.getElementById("inputString").value;
+      var sortedString = input.split('').sort().join('');
+      document.getElementById("result").textContent = sortedString;
+    }
+  </script>
+</head>
+<body>
+  <h1>String Sorter</h1>
+  <form>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button type="button" onclick="sortString()">Sort</button>
+  </form>
+  <p>Sorted string: <span id="result"></span></p>
+</body>
+</html>

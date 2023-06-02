@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 10</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    let outputDiv = document.getElementById('output');
+    let outputHTML = '';
+
+    // create a sample array of integers, then use the methods: concat, copywithin, map, every, some, filter, find, findIndex, indexOf, lastIndexOf, push, pop, shift. Log the results to the console along with the name of the method used.
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    outputHTML += "<p>Original array: " + arr + "</p>";
+
+    outputHTML += "<p>Using concat method:<br>";
+    outputHTML += arr.concat([10, 11, 12]) + "</p>";
+
+    outputHTML += "<p>Using copyWithin method:<br>";
+    outputHTML += arr.copyWithin(0, 3, 6) + "</p>";
+
+    outputHTML += "<p>Using map method:<br>";
+    outputHTML += arr.map(x => x * 2) + "</p>";
+
+    outputHTML += "<p>Using every method:<br>";
+    outputHTML += arr.every(x => x > 0) + "</p>";
+
+    outputHTML += "<p>Using some method:<br>";
+    outputHTML += arr.some(x => x > 0) + "</p>";
+
+    outputHTML += "<p>Using filter method:<br>";
+    outputHTML += arr.filter(x => x > 5) + "</p>";
+
+    outputHTML += "<p>Using find method:<br>";
+    outputHTML += arr.find(x => x > 5) + "</p>";
+
+    outputHTML += "<p>Using findIndex method:<br>";
+    outputHTML += arr.findIndex(x => x > 5) + "</p>";
+
+    outputHTML += "<p>Using indexOf method:<br>";
+    outputHTML += arr.indexOf(5) + "</p>";
+
+    outputHTML += "<p>Using lastIndexOf method:<br>";
+    outputHTML += arr.lastIndexOf(5) + "</p>";
+
+    outputHTML += "<p>Using push:<br>";
+    arr.push(10);
+    outputHTML += arr + "</p>";
+
+    outputHTML += "<p>Using pop:<br>";
+    arr.pop();
+    outputHTML += arr + "</p>";
+
+    outputHTML += "<p>Using shift:<br>";
+    arr.shift();
+    outputHTML += arr + "</p>";
+
+    outputDiv.innerHTML = outputHTML;
+  </script>
+</body>
+</html>
